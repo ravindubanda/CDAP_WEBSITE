@@ -167,7 +167,7 @@ h1::after{
   display: block;
   position: relative;
   z-index: 1;
-  margin: -15px 0
+  margin: -15px 0;
 }
 
 .portfolio-item figure figcaption {
@@ -345,7 +345,16 @@ h1::after{
     z-index: 9999;
     border-radius: 10px;
     background-color: #7c7d7e;
-} 
+}
+#finalBox{
+	/*initially dialog box is hidden*/
+    display: none;
+    position: fixed;
+    width: 800px;
+    z-index: 9999;
+    border-radius: 10px;
+    background-color: #7c7d7e;
+}  
  #dlg-header{
     background-color: #8a8b8e;
     color: white;

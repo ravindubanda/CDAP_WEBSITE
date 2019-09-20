@@ -197,6 +197,25 @@
 				dlg.style.left = (winWidth/2) - 800/2 + "px";
 				dlg.style.top = "150px";
 			}
+			function finalOK(){
+				dlgHide10();
+			}
+			function dlgHide10(){
+				var whitebg = document.getElementById("white-background");
+				var dlg = document.getElementById("finalBox");
+				whitebg.style.display = "none";
+				dlg.style.display = "none";
+			}
+			function showFinal(){
+				var whitebg = document.getElementById("white-background");
+				var dlg = document.getElementById("finalBox");
+				whitebg.style.display = "block";
+				dlg.style.display = "block";
+				var winWidth = window.innerWidth;
+				dlg.style.left = (winWidth/2) - 800/2 + "px";
+				dlg.style.top = "150px";
+			}
+
 		</script>
 	</head>
 	<body>
@@ -246,21 +265,21 @@
 					</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="img/shopping11.jpg" class="d-block w-100" alt="...">
-						<div class="carousel-caption">
-							<!--<h5>How to make a website</h5>-->
+						<img src="img/Promopal_back_01.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<!--Caption-->
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="img/shopping6.jpg" class="d-block w-100" alt="...">
 						<div class="carousel-caption">
-							<!--<h5>How to make a website</h5>-->
+							<!--Caption-->
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="img/back_01.jpg" class="d-block w-100" alt="...">
 						<div class="carousel-caption">
-							<!--<h5>How to make a website</h5>-->
+							<!--Caption-->
 						</div>
 					</div>
 				</div>
@@ -672,14 +691,14 @@
 					<div class="column">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title text-primary">Project Proposal Documant</h5>
+								<h5 class="card-title text-primary">Project Proposal Document</h5>
 								<button onclick="showProposal()" class="btn btn-primary">View Description</button>
 							</div>
 						</div>
 						<div id="white-background">
 						</div>
 						<div id="milestoneproposalBox">
-							<div id="dlg-header">Project Proposal Documant</div>
+							<div id="dlg-header">Project Proposal Document</div>
 								<div id="dlg-body">
 									<p>Date of the Assesment : 2019-03-12</p>
 									Project Proposal documant is the initial documant that demarcate the initial requirements of the
@@ -693,12 +712,12 @@
 						</div>
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title text-primary">SRS Documant</h5>
+								<h5 class="card-title text-primary">SRS Document</h5>
 								<button onclick="showSrs()" class="btn btn-primary">View Description</button>
 							</div>
 						</div>
 						<div id="milestonesrsBox">
-							<div id="dlg-header">SRS Documant</div>
+							<div id="dlg-header">SRS Document</div>
 								<div id="dlg-body">
 								<p>Date of the Assesment : 2019-04-22</p>
 								The purpose of this Software Requirements Specification document is to provide a detailed 
@@ -721,12 +740,12 @@
 						</div>
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title text-primary">Progrees Presentation 1</h5>
+								<h5 class="card-title text-primary">Progress Presentation 1</h5>
 								<button onclick="showprogress1()" class="btn btn-primary">View Description</button>
 							</div>
 						</div>
 						<div id="progressBox1">
-							<div id="dlg-header">Progrees Presentation 1</div>
+							<div id="dlg-header">Progress Presentation 1</div>
 								<div id="dlg-body"> 
 								<p>Date of the Assesment : 2019-06-18</p>
 								In Progrees Presentation 1 we have to implement our system up to 50% of the final product.
@@ -740,12 +759,12 @@
 					<div class="column">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title text-primary">Progrees Presentation 2</h5>
+								<h5 class="card-title text-primary">Progress Presentation 2</h5>
 								<button onclick="showprogress2()" class="btn btn-primary">View Description</button>
 							</div>
 						</div>
 						<div id="progressBox2">
-							<div id="dlg-header">Progrees Presentation 2</div>
+							<div id="dlg-header">Progress Presentation 2</div>
 								<div id="dlg-body"> 
 								<p>Date of the Assesment : 2019-09-02</p>
 								In Progrees Presentation 2 we have to implement our system up to 90% of the final product.
@@ -758,7 +777,18 @@
 						<div class="card">
 							<div class="card-body">
 								<h5 class="card-title text-primary">Final Assesment and Viva</h5>
-								<button onclick="showSrs()" class="btn btn-primary">View Description</button>
+								<button onclick="showFinal()" class="btn btn-primary">View Description</button>
+							</div>
+						</div>
+						<div id="finalBox">
+							<div id="dlg-header">Final Assesment and Viva</div>
+								<div id="dlg-body"> 
+									<p>Date of the Assesment : 2019-11-13</p>
+									Final Presentation evaluates the team on results of the final product. Checks whether the proposed work has been implemented in the final product and works as a unit.
+									In the Viva presentation, the team is evaluated individually on the work they've done including the source code of the system as well as literature survey.
+								</div>
+							<div id="dlg-footer">
+								<button onclick="finalOK()">OK</button>
 							</div>
 						</div>
 					</div>					
@@ -915,15 +945,15 @@
 				<h1>Get in Touch</h1>
 				<div class="row">
 					<div class="col-md-6">
-						<form class="contact-form">
+						<form class="contact-form" action="MAILTO:promopal.research@gmail.com" method="post" enctype="text/plain">
 							<div class="form-group">
-								<input type="text" name="name" class="form-control" placeholder="Enter your name">
+								<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
 							</div>
 							<div class="form-group">
-								<input type="email" name="email" class="form-control" placeholder="Enter your email">
+								<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email">
 							</div>
 							<div class="form-group">
-								<textarea name="message" class="form-control" rows="4" placeholder="Enter your Message"></textarea>
+								<textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your Message"></textarea>
 							</div>
 							<button type="submit" name="submit" class="btn btn-primary">Submit<button>
 						</form>
